@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+    rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./style.css"/>
+    <title>formulário cartão de crédito</title>
+</head>
+<body>
+    <form>
+        <section id="credit-card">
+            <div class="front"></div>
+            <div class="back"></div>
+        </section>
+        <section class="inputs flex">
+            <section class="input-wrapper">
+                <label for="cc-number">Número do cartão</label>
+                <input
+                    id="cc-number"
+                    type="text"
+                    minlength="16"
+                    maxlength="16"
+                    placeholder="**** **** **** ****"
+                    required >
+                    <div class="warning">
+                        <img src="./assets/warning.png"
+                        alt="warning">
+                        Digite apenas os números
+                    </div>
+            </section>
+
+            <div class="input-wrapper">
+            <label for="cc-holder">Nome do titular</label>
+            <input
+            id="cc-holder"
+            type="text"
+            placeholder="Nome como esta no cartão"
+            required >
+            <div class="warning">
+                <img src="./assets/warning.png"
+                alt="warning">
+                Nome do titular é obrigatório
+            </div>
+            </div>
+            </div>
+
+            <div class="col-2 flex">
+            <div class="input-wrapper">
+                    <label for="cc-validity">Validade</label>
+                    <input
+                    id="cc-validity"
+                    type="text"
+                    minlength="4"
+                    maxlength="5"
+                    placeholder="mm/aa">
+            </div>
+
+            <div class="input-wrapper">
+                <label class="flex help" for="cc-cvv">CVV
+                    <img src="./assets/help.png"
+                    alt="help"
+                    title="Este número está, geralmente, no verso do cartão.">
+                </label>
+                <input
+                    id="cc-cvv"
+                    type="caracter"
+                    minlength="3"
+                    maxlength="4"
+                    placeholder="***">
+            </div>
+        </section>
+        <section class="info-security flex">
+            <img src="assets/security.png"
+            alt="security">
+            Seus dados estão seguros
+        </section>
+        
+        <button>Adicionar Cartão</button>
+    </form>
+
+    <script src="https://unpkg.com/imask"></script>
+</body>
+</html>
